@@ -14,6 +14,8 @@ jobs:
         uses: actions/checkout@v4
       - name: Install, build, and upload with Astro
         uses: withastro/action@v3
+        with:
+          package-manager: pnpm@10.11.1 # Matches your ci.yml exactly
   deploy:
     needs: build
     runs-on: ubuntu-latest
